@@ -1,0 +1,39 @@
+CREATE TABLE LECTURER( 
+ LECTURER_ID int NOT NULL, 
+ SURNAME nvarchar(50), 
+ [NAME] nvarchar(50),
+ CITY nvarchar(50),
+ UNIV_ID int)
+
+ CREATE TABLE SUBJ_LECT(
+ LECTURER_ID int NOT NULL,
+ SUBJ_ID int)
+
+ CREATE TABLE [SUBJECT](
+ SUBJ_ID int NOT NULL,
+ SUBJ_NAME nvarchar(50),
+ [HOUR] int,
+ SEMESTER int)
+
+ CREATE TABLE EXAM_MARKS(
+ EXAM_ID int NOT NULL,
+ STUDENT_ID int,
+ SUBJ_ID int,
+ MARK int,
+ EXAM_DATE date)
+
+ CREATE TABLE STUDENT(
+ STUDENT_ID int NOT NULL,
+ SURNAME nvarchar(50), 
+ [NAME] nvarchar(50),
+ STIPEND int,
+ KURS int,
+ CITY nvarchar(50),
+ BIRTHDAY date,
+ UNIV_ID int)
+
+ CREATE TABLE UNIVERSITY(
+ UNIV_ID int NOT NULL,
+ UNIV_NANE nvarchar(50),
+ RATING int,
+ CITY nvarchar(50))
